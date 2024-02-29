@@ -1,0 +1,70 @@
+/* #field {
+  border: 1px solid black;
+}
+.cell {
+  border: 1px solid black;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+} */
+
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#field {
+  border: 6px solid #bbada0; /* Couleur de la bordure */
+  border-radius: 6px; /* Bords arrondis */
+  background-color: #cdc1b4; /* Couleur de fond */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+
+.cell {
+  border: 6px solid transparent; /* Bordures */
+  text-align: center;
+  width: 100px; /* Largeur des cellules */
+  height: 100px; /* Hauteur des cellules */
+  font-size: 36px; /* Taille de la police */
+  font-weight: bold; /* Gras */
+  background-color: #eee4da; /* Couleur de fond des cellules */
+  color: #776e65; /* Couleur du texte */
+  transition: background-color 0.3s; /* Animation de transition */
+}
+
+/* Couleurs pour les valeurs différentes */
+.cell[data-value="2"] { background-color: #eee4da; color: #776e65; }
+.cell[data-value="4"] { background-color: #ede0c8; color: #776e65; }
+.cell[data-value="8"] { background-color: #f2b179; color: white; }
+.cell[data-value="16"] { background-color: #f59563; color: white; }
+.cell[data-value="32"] { background-color: #f67c5f; color: white; }
+.cell[data-value="64"] { background-color: #f65e3b; color: white; }
+.cell[data-value="128"] { background-color: #edcf72; color: white; }
+.cell[data-value="256"] { background-color: #edcc61; color: white; }
+.cell[data-value="512"] { background-color: #edc850; color: white; }
+.cell[data-value="1024"] { background-color: #edc53f; color: white; }
+.cell[data-value="2048"] { background-color: #edc22e; color: white; }
+.cell[data-value="4096"] { background-color: #3c3a32; color: white; }
+.cell[data-value="8192"] { background-color: #3c3a32; color: white; }
+
+/* Style pour le texte "Game Over" */
+#game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  display: none; /* Masqué par défaut */
+}
